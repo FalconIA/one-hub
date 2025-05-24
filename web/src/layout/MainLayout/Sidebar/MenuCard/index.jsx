@@ -195,7 +195,7 @@ const MenuCard = () => {
                 color="text.secondary"
                 sx={{ fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: 0.5 }}
               >
-                <Icon icon="solar:call-linear" width={12} />
+                <Icon icon="solar:chat-square-call-linear" width={12} />
                 {new Intl.NumberFormat().format(requestCount)}
               </Typography>
             </Tooltip>
