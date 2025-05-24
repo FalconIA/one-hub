@@ -55,10 +55,13 @@
     "dev": "vite",
     "start": "vite preview",
     "build": "vite build --outDir build",
+    "build-offline": "node ./scripts/download-icons.js && node ./scripts/replace-iconify.js && vite build --outDir build",
     "i18n": "lobe-i18n",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
-    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "download-icons": "node ./scripts/download-icons.js",
+    "replace-iconify": "node ./scripts/replace-iconify.js"
   },
   "eslintConfig": {
     "extends": [
@@ -85,6 +88,8 @@
     "@babel/core": "^7.23.9",
     "@babel/eslint-parser": "^7.23.10",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@iconify/json": "^2.2.341",
+    "@iconify/utils": "^2.3.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-react-app": "^7.0.1",
